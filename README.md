@@ -1,5 +1,5 @@
 # Основы си
-Оглавление
+Оглавление:
 #1 Калькулятор
 #2 Процедуры и функции
 #3 Массивы и циклы
@@ -7,6 +7,18 @@
 #5 Циклы
 #6 Массивы/матрицы
 #7 Заполнение всего столбца/строки
+#8 Макросы
+#9 Рандомные числа
+#10 Структуры/typedef
+#11 Вещественные числа/float
+#12 Функции Atoi(int)/Atof(int)
+#13 Указатели адреса/NULL
+#14 Указатель на структуру
+#15 Размер в байтах
+#16 Распределение памяти
+#17 Динамический массив/адресация памяти
+
+
 
 
 
@@ -376,11 +388,11 @@ int main()
 }  
 
 
-#8 Макросы/cnt=5
+#8 Макросы
 
 #include <stdio.h>
-#include <stdlib.h>
-#define cnt 5
+#include <stdlib.h> 
+#define cnt 5           //cnt = 5//
 #define celoei int i = cnt
 #define showi printf("%d\n", i)
 int main()
@@ -623,7 +635,7 @@ int main()
 }
 
 
-#12 Atoi(int)/Atof(float)
+#12 Функции Atoi(int)/Atof(float)
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -637,38 +649,7 @@ int main()
 }
 
 
-#13 Прикольный код 1
-
-#include <stdio.h>
-#include <stdlib.h>
-typedef struct {
-    int x, y, z;
-    char name[50];
-    char color[20];
-} TBox;
-int main()
-{
-    TBox box[3];
-    for (int i=0; i<3; i++)
-    {
-        box[i].x = rand() % 100;
-        box[i].y = rand() % 100;
-        box[i].z = rand() % 100;
-    }
-    sprintf(box[0].name, "chair");
-    sprintf(box[0].color, "green");
-    sprintf(box[1].name, "table");
-    sprintf(box[1].color, "red");
-    sprintf(box[2].name, "something strange");
-    sprintf(box[2].color, "blue");
-    for (int i=0; i<3; i++)
-        printf("name=%s\n\n x=%d\n y=%d\n z=%d\n color=%s\n",
-               box[i].name, box[i].x, box[i].y, box[i].z, box[i].color);
-    return 0;
-}
-
-
-#14 Указатели адреса/NULL
+#13 Указатели адреса/NULL
 
 #include <stdio.h>                                         
 #include <stdlib.h>
@@ -707,7 +688,7 @@ int main()
 }
 
 
-#15 Указатель на структуру
+#14 Указатель на структуру
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -738,7 +719,7 @@ int main()
 } 
 
 
-#16 Размер в байтах
+#15 Размер в байтах
 
  #include <stdio.h>
 #include <stdlib.h>
@@ -753,7 +734,7 @@ int main()
 }
 
 
-#17 Распределение памяти
+#16 Распределение памяти
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -846,7 +827,7 @@ int main()
 }
 
 
-#18 Динамический массив/адресация памяти
+#17 Динамический массив/адресация памяти
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -865,7 +846,7 @@ int main()
 }     
 
 
-#19 Указатель на указатель
+#18 Указатель на указатель
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -901,7 +882,7 @@ int main()
 }
 
 
-#20 Поменять местами значения
+#19 Поменять местами значения
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -921,7 +902,7 @@ int main()
 }
 
 
-#21 Заполнение массива
+#20 Заполнение массива
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -948,7 +929,7 @@ int main()
 }
 
 
-#22 Указатель на функцию
+#21 Указатель на функцию
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -987,7 +968,7 @@ int main()
 }
 
 
-#23 Тернарный оператор
+#22 Тернарный оператор
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1012,7 +993,7 @@ int main()
 }
 
 
-#24 Факториалы/последовательность ввода текста
+#23 Факториалы/последовательность ввода текста
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1066,7 +1047,7 @@ void main ()
 }   
 
 
-#25 Оператор выбора switch
+#24 Оператор выбора switch
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1091,7 +1072,7 @@ int main()
 } 
 
 
-#26 Статическая переменная
+#25 Статическая переменная
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1109,7 +1090,7 @@ int main()
 }
 
 
-#27 Возведение в степень
+#26 Возведение в степень
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1127,7 +1108,7 @@ int main()
 }   
 
 
-#28 Инициализация
+#27 Инициализация
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1149,7 +1130,7 @@ int main()
 }    
 
 
-#29 Открытие файла/запись в файл/закрытие файла
+#28 Открытие файла/запись в файл/закрытие файла
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1307,7 +1288,7 @@ int main()
 }
 
 
-#30 Коды символов и бинарный режим(«wb» «rb»)
+#29 Коды символов и бинарный режим(«wb» «rb»)
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1331,7 +1312,7 @@ int main()
 }    
 
 
-#31 ftell и fseek - положение курсора
+#30 Функции ftell и fseek - положение курсора
 Литералы: a, a+, r, r+, w, w+, r+b, r+t
 
 #include <stdlib.h>
@@ -1372,7 +1353,7 @@ int main()
 }   
 
 
-#32 Объединения
+#31 Объединения
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1391,7 +1372,7 @@ int main()
 } 
 
 
-#33 Строки подробно
+#32 Строки подробно
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1419,6 +1400,34 @@ int main() {
     printf("%s%s\n", str, str2);
     return 0;
 }  
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct {
+    int x, y, z;
+    char name[50];
+    char color[20];
+} TBox;
+int main()
+{
+    TBox box[3];
+    for (int i=0; i<3; i++)
+    {
+        box[i].x = rand() % 100;
+        box[i].y = rand() % 100;
+        box[i].z = rand() % 100;
+    }
+    sprintf(box[0].name, "chair");
+    sprintf(box[0].color, "green");
+    sprintf(box[1].name, "table");
+    sprintf(box[1].color, "red");
+    sprintf(box[2].name, "something strange");
+    sprintf(box[2].color, "blue");
+    for (int i=0; i<3; i++)
+        printf("name=%s\n\n x=%d\n y=%d\n z=%d\n color=%s\n",
+               box[i].name, box[i].x, box[i].y, box[i].z, box[i].color);
+    return 0;
+} 
 
 
 #33 Перечисления и перечисляемые константы
@@ -1534,7 +1543,7 @@ int main()
 }  
 
 
-#35 Системы счисления
+#36 Системы счисления
 //%o - восьмеричная система счисления//
 //%x - 16ая система счисления//
 
@@ -1616,7 +1625,7 @@ int main()
 }
 
 
-#36 Флаги
+#37 Флаги
 // | | | = флаги //
 
 #include <stdlib.h>
@@ -1661,7 +1670,7 @@ int main()
 
 
 
-#37 Аргументы командной строки
+#38 Аргументы командной строки
 strtol преобразует строку в число
 
 #include <stdlib.h>
@@ -1678,7 +1687,7 @@ int main(int argc, char *argv[])
 }   
 
 
-#38 Константы const
+#39 Константы const
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1707,7 +1716,7 @@ int main()
 }
 
 
-#39 Оператор запятая
+#40 Оператор запятая
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1831,7 +1840,7 @@ int main()
 }
 
 
-#41 Двуменые и динамические массивы
+#42 Двуменые и динамические массивы
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1975,7 +1984,7 @@ int main()
 } 
 
 
-#42 Объявление функции
+#43 Объявление функции
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1991,7 +2000,7 @@ void func(int a) //заголовок функции//
 } 
 
 
-#43 Расположение структуры
+#44 Расположение структуры
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -2030,7 +2039,7 @@ int main()
 }
 
 
-#44 Инициализация
+#45 Инициализация
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -2062,7 +2071,7 @@ int main()
 }
 
 
-#45 Безымянные переменные
+#46 Безымянные переменные
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -2117,7 +2126,7 @@ int main()
 }
 
 
-#46 Функции exit/atexit/abort
+#47 Функции exit/atexit/abort
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -2151,7 +2160,7 @@ int main()
 } 
 
 
-#47 Модуль assert
+#48 Модуль assert
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -2170,7 +2179,7 @@ int main()
 }   
 
 
-#48 Куб числа
+#49 Куб числа
 
 #include <stdio.h>
 int cube(int x)
