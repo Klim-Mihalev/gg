@@ -22,13 +22,13 @@
 #20 Заполнение массива
 #21 Указатель на функцию
 #22 Тернарный оператор
-#23 Факториалы/последовательность ввода текста
+#23 Факториалы/последовательность ввода
 #24 Оператор выбора switch
 #25 Статическая переменная
 #26 Возведение в степень
 #27 Инициализация
 #28 Открытие файла/запись в файл/закрытие файла
-#29 Коды символов и бинарный режим(<<wb>> <<rb>>)
+#29 Коды символов и бинарный режим(wb rb)
 #30 Функции ftell и fseek
 #31 Объединения
 #32 Строки подробно
@@ -115,7 +115,6 @@ int main()
     return 0;
 }
  
-
 void proc(int x)
 {
     if (x < 10)
@@ -180,17 +179,14 @@ int main()
     return 0;
 }        
  
-
 #include <stdio.h>
 int main()
 {
     int i = 0;
     int mas[] = {1,2,3,40,5,6,7,80,9,0};
     int len = sizeof(mas) / sizeof(mas[0]);
-
     for (i=0;i<10;i++)
         printf("%d\n", mas[i]);
-
     return 0;
 }
 
@@ -286,7 +282,6 @@ int main()
     return 0;
 }           
 
-
 int main()
 {
     int a;
@@ -299,7 +294,6 @@ int main()
     return 0;
 }
 
-
 int main()
 {
     int a;
@@ -307,7 +301,6 @@ int main()
         printf("%d\n", a);
     return 0;
 }
-
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -325,7 +318,6 @@ int main()
     while (a <= 18);
     return 0;
 }
-
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -369,7 +361,6 @@ int main()
     mm[0][1][10] = 'w';
     return 0;
 }      
-
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -1022,7 +1013,7 @@ int main()
 }
 
 
-#23 Факториалы/последовательность ввода текста
+#23 Факториалы/последовательность ввода
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1346,7 +1337,7 @@ int main()
 }
 
 
-#29 Коды символов и бинарный режим(«wb» «rb»)
+#29 Коды символов и бинарный режим(wb rb)
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1727,7 +1718,6 @@ int main()
 }
 
 
-
 #38 Аргументы командной строки
 strtol преобразует строку в число
 
@@ -1914,8 +1904,7 @@ int main()
         mas[i] = malloc(sizeof(**mas) * h);
     for (j = 0; j < h; j++)
         for (i = 0; i < w; i++)
-            mas[i][j] = 100*j + i;
-    
+            mas[i][j] = 100*j + i;    
 //h = 4;
     for (i = 0; i < w; i++)
         mas[i] = realloc(mas[i], sizeof(**mas) * h);//   увеличение/уменьшение высоты массива
@@ -2037,7 +2026,6 @@ int main()
   printf("\nResult array:\n");
   for (i=0; i<sizeLine; i++)
     printf("[%d]=%d\t",i,line[i]);
-
   return 0;
 } 
 
@@ -2140,7 +2128,6 @@ int main()
         printf("%d ", o.mas[i]);
     return 0;
 } 
-
 
 #include <stdio.h>
 #include <stdlib.h>
