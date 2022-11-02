@@ -17,8 +17,30 @@
 #15 Размер в байтах
 #16 Распределение памяти
 #17 Динамический массив/адресация памяти
-
-
+#18 Указатель на указатель
+#19 Поменять местами значения
+#20 Заполнение массива
+#21 Указатель на функцию
+#22 Тернарный оператор
+#23 Факториалы/последовательность ввода текста
+#24 Оператор выбора switch
+#25 Статическая переменная
+#26 Возведение в степень
+#27 Инициализация
+#28 Открытие файла/запись в файл/закрытие файла
+#29 Коды символов и бинарный режим(<<wb>> <<rb>>)
+#30 Функции ftell и fseek
+#31 Объединения
+#32 Строки подробно
+#33 Перечисления и перечисляемые константы
+#34 Функции с переменным количеством аргументов
+#35 Среднее арифметическое
+#36 Системы счисления
+#37 Флаги
+#38 Аргументы командной строки
+#39 Константы const
+#40 Оператор запятая
+#41
 
 
 
@@ -1129,6 +1151,35 @@ int main()
     return 0;
 }    
 
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct {int x, y, z;} point;
+int main()
+{
+    int m[3] = {[1] = 5, 6};
+    point p = {.y = 33, 44};
+    printf("%d %d %d\n", m[0], m[1], m[2]);
+    printf("%d %d %d\n", p.x, p.y, p.z);
+    return 0;
+} 
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct {int x, y, z;} point;
+/*int i;
+int m[3];
+point p;   то же самое что и static */
+int main()
+{
+    static int i;
+    static int m[3];
+    static point p;
+    printf("%d\n", i);
+    printf("%d %d %d\n", m[0], m[1], m[2]);
+    printf("%d %d %d\n", p.x, p.y, p.z);
+    return 0;
+}
+
 
 #28 Открытие файла/запись в файл/закрытие файла
 
@@ -1739,7 +1790,7 @@ int main()
 }
 
 
-#40 Числовые литералы
+#41 Числовые литералы
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1752,7 +1803,7 @@ int main()
 }   
 
 
-#41 Сложные объявления
+#42 Сложные объявления
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1840,7 +1891,7 @@ int main()
 }
 
 
-#42 Двуменые и динамические массивы
+#43 Двуменые и динамические массивы
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -1984,7 +2035,7 @@ int main()
 } 
 
 
-#43 Объявление функции
+#44 Объявление функции
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -2000,7 +2051,7 @@ void func(int a) //заголовок функции//
 } 
 
 
-#44 Расположение структуры
+#45 Расположение структуры
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -2035,38 +2086,6 @@ int main()
     struct S1 a;
     a.x = 3;
     printf("%d\n", a.x);
-    return 0;
-}
-
-
-#45 Инициализация
-
-#include <stdio.h>
-#include <stdlib.h>
-typedef struct {int x, y, z;} point;
-int main()
-{
-    int m[3] = {[1] = 5, 6};
-    point p = {.y = 33, 44};
-    printf("%d %d %d\n", m[0], m[1], m[2]);
-    printf("%d %d %d\n", p.x, p.y, p.z);
-    return 0;
-} 
-
-#include <stdio.h>
-#include <stdlib.h>
-typedef struct {int x, y, z;} point;
-/*int i;
-int m[3];
-point p;   то же самое что и static */
-int main()
-{
-    static int i;
-    static int m[3];
-    static point p;
-    printf("%d\n", i);
-    printf("%d %d %d\n", m[0], m[1], m[2]);
-    printf("%d %d %d\n", p.x, p.y, p.z);
     return 0;
 }
 
